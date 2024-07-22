@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import Accueil from './components/Accueil';
+import FlightAuthorizationForm from './components/FlightAuthorizationForm';
+import AddFlight from './components/AddFlight';
+import FlightList from './components/FlightList';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/accueil" element={<Accueil />} />
+        <Route path="/flight-authorization-form" element={<FlightAuthorizationForm />} />
+        <Route path="/add-flight" element={<AddFlight />} />
+        <Route path="/flight-list" element={<FlightList />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

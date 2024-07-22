@@ -1,0 +1,40 @@
+h2 {
+   
+    text-align: center;
+    color: #030303;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+button[type="submit"] {
+    background-color: #4CAF50; 
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+
+button[type="reset"] {
+    background-color: #f44336; 
+}
+
+button[type="reset"]:hover {
+    background-color: #e53935;
+    transform: translateY(-2px);
+}
+
